@@ -139,10 +139,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-
 # CELERY STUFF
-CELERY_BROKER_URL =config('CELERY_BROKER', default='redis://redis:6379') 
-CELERY_RESULT_BACKEND =config('CELERY_BACKEND', default='redis://redis:6379') 
+CELERY_BROKER_URL = config('CELERY_BROKER', default='redis://redis:6379')
+CELERY_RESULT_BACKEND = config('CELERY_BACKEND', default='redis://redis:6379')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
